@@ -12,7 +12,7 @@
     <input type="number" id="liczba" step="any">
     <input id="przycisk" type="submit" value="Zaokrąglij" onclick="zaokraglij()">
    
-    <div id="div" class="container" style="display: flex; margin-top: 20px;">
+    <div class="div">
             <div id="a" class="wynik"></div>
             <div id="b" class="wynik"></div>
             <div id="c" class="wynik"></div>
@@ -23,11 +23,12 @@
     <script>
         function zaokraglij() {
             var liczba = parseFloat(document.getElementById("liczba").value);
-            if (isNaN(liczba)) {
-                alert("Proszę wpisać poprawną liczbę.");
-                return;
-            }
 
+            if (Number.isInteger(liczba)) {
+                alert("Nie tak wpisz liczbę dziesiętną");
+                return false;
+            }
+            else
 
             var Gora = Math.ceil(liczba);
             var Dol = Math.floor(liczba);
