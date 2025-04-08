@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaokrąglanie liczb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Zaokrąglanie liczby</h2>
+    <label for="liczba">Wpisz liczbę dziesiętną:</label>
+    <input type="number" id="liczba" step="any">
+    <input id="przycisk" type="submit" value="Zaokrąglij" onclick="zaokraglij()">
+   
+    <div id="div" class="container" style="display: flex; margin-top: 20px;">
+            <div id="a" class="wynik"></div>
+            <div id="b" class="wynik"></div>
+            <div id="c" class="wynik"></div>
+            <div id="d" class="wynik"></div>
+        </div>
+
+
+    <script>
+        function zaokraglij() {
+            var liczba = parseFloat(document.getElementById("liczba").value);
+            if (isNaN(liczba)) {
+                alert("Proszę wpisać poprawną liczbę.");
+                return;
+            }
+
+
+            var Gora = Math.ceil(liczba);
+            var Dol = Math.floor(liczba);
+            var calkowita = Math.round(liczba);
+            var usuniecie = Math.trunc(liczba);
+
+
+            document.getElementById("a").innerHTML = "Zaokrąglenie w górę: " + Gora;
+            document.getElementById("b").innerHTML = "Zaokrąglenie w dół: " + Dol;
+            document.getElementById("c").innerHTML = "Zaokrąglenie do liczby całkowitej: " + calkowita;
+            document.getElementById("d").innerHTML = "Obcięcie części dziesiętnej: " + usuniecie;
+        }
+    </script>
+</body>
+</html>
