@@ -1,25 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
-    margin: 0;
-    padding: 20px;
     text-align: center;
 }
 
-
-h2 {
-    color: black;
-}
-
-
-.container {
+.div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 20px;
-    flex-wrap: wrap;
 }
-
 
 .wynik {
     background-color: white;
@@ -34,22 +23,3 @@ h2 {
     border-radius: 10px;
 }
 
-
-#a {
-    background-color: white;
-}
-
-
-#b {
-    background-color: white;
-}
-
-
-#c {
-    background-color: white;
-}
-
-
-#d {
-    background-color: white;
-}
